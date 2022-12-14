@@ -1,9 +1,9 @@
-var fs = require('fs');
-fs.readFile('inputfile.txt', function(err, data) {
-if( !err )
-fs.writeFile('writeMe.txt', data, (err)=>{
-    if(err ) throw err;
+var fs=require('fs');
+fs.readFile("input.txt",function(err,data){
+    if (!err)
+    fs.writeFile("newfile.txt",data,(err)=>{
+        if (err) throw err;
+        console.log("DONE");
     });
-else
-throw err;
+    else throw err;
 });
